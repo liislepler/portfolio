@@ -1,0 +1,285 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header */
+.main-page {
+  background-color: #FFFCF6;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: relative;
+  background-image: url("/src/paper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100vw;
+  height: 13em;
+  z-index: 1;
+  border-bottom: 0.2em solid #D74E25;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.book {
+  position: relative;
+  background-image: url("/src/portfolio.png");
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  right: 5em;
+  height: 13em;
+  z-index: 3;
+}
+
+.project-button {
+  position: absolute;
+  top: 4em;
+  right: 1.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.about-button {
+  position: absolute;
+  top: 8em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.box1, .box2 {
+  position: relative;
+  z-index: -1;
+  height: 2.4em;
+}
+
+.project-button h3, .about-button h3 {
+  position: absolute;
+  right: 1em;
+  top: 0.2em;
+  font-family: 'Special Elite', cursive;
+  font-size: 0.6em;
+  font-weight: 500;
+}
+
+.project-button h3 {
+  top: 0.5em;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 0.8em;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.menu-title {
+  display: flex;
+}
+
+.menu-title h3 {
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 0.4em;
+  margin-right: 0.3em;
+}
+
+.tag {
+  margin-top: 0.3em;
+  font-size: 0.8em;
+}
+
+.arrow-container {
+  display: flex;
+}
+
+.menu a {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding-bottom: 0.4em;
+}
+
+.menu a:hover {
+  font-weight: 800;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 10em;
+  top: 100%;
+  left: 0;
+}
+
+.menu.active .dropdown {
+  display: flex;
+}
+
+.arrow {
+  margin-top: 0.3em;
+  margin-right: 0.8em;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000000;
+  transition: transform 0.2s;
+}
+
+.menu.active .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.projects {
+  margin: 0 auto;
+  margin-top: 4em;
+  width: 90vw;
+}
+
+.projects h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+.projects h4 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    height: 24em;
+  }
+  .book {
+    background-size: 110% auto;
+    height: 24em;
+  }
+  .project-button {
+    top: 10em;
+    right: 2em;
+  }  
+  .about-button {
+    top: 17em;
+    right: 1.5em;
+  }
+  .project-button h3, .about-button h3 {
+    right: 1.5em;
+    top: 0.2em;
+    font-size: 1.4em;
+    font-weight: 500;
+  } 
+  .about-button h3 {
+    right: 1em;
+    top: 0;
+  }
+  .project-button h3 {
+    top: 0.4em;
+  }
+  .box1, .box2 {
+    height: 5em;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
+    align-items: center;
+    grid-gap: 1em;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  header {
+    height: 32em;
+  }
+  .book {
+    background-size: 100% auto;
+    height: 32em;
+    margin-left: 10%;
+  }
+  .project-button {
+    top: 14em;
+    right: 12%;
+  }
+  .about-button {
+    top: 20em;
+    right: 11%;
+  }
+  .project-button h3, .about-button h3 {
+    right: 2em;
+    top: 0.2em;
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  .about-button h3 {
+    right: 2em;
+    top: 0;
+  }
+  .project-button h3 {
+    top: 0.4em;
+  }
+  .box1, .box2 {
+    height: 5em;
+  }
+  .menu {
+    margin-top: 1.5em;
+    margin-left: 10%;
+  }
+  .menu-title h3 {
+    font-size: 1.5em;
+  }
+  .arrow {
+    margin-top: 0.5em;
+  }
+  .tag {
+    font-size: 1em;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60vw;
+  }
+}

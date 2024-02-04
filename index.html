@@ -12,7 +12,61 @@
 </head>
 
 <body>
+    <div class="main-page">
+        <header>
+            <div class="book"></div>
 
+            <a href="">
+                <div class="project-button">
+                    <h3>Projects</h3>
+                    <img class="box1" src="./src/box1.png" height="fit-content">
+                </div>
+            </a>
+            <a href="">
+                <div class="about-button">
+                    <h3>About me +<br>Contact</h3>
+                    <img class="box2" src="./src/box2.png" height="fit-content">
+                </div>
+            </a>
+
+            <div class="menu" onclick="toggleDropdown(this)">
+                <div class="menu-title">
+                  <h3>Projects</h3>
+                  <div class="arrow-container">
+                    <div class="arrow"></div>
+                    <div class="tag" id="selectedTag"></div>
+                  </div>
+                </div>
+                <div class="dropdown" onclick="updateMainTitle(event)">
+                  <a href="#">UI/UX Design</a>
+                  <a href="#">Graphic Design</a>
+                  <a href="#">Frontend Development</a>
+                  <a href="#">Motion Graphics</a>
+                  <a href="#">Illustrations</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="projects">
+                <div>
+                    <img>
+                    <h2>StaChesstics</h2>
+                    <h4>2023-2024</h4>
+                </div>
+                <div>
+                    <img>
+                    <h2>World Simplified</h2>
+                    <h4>2022</h4>
+                </div>
+                <div>
+                    <img>
+                    <h2>Luca Deli</h2>
+                    <h4>2024</h4>
+                </div>
+            </div>
+        </main>
+    </div>
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -20,6 +74,16 @@
     $(window).load(function() {
         $(".se-pre-con").fadeOut("slow");;
     });
+    function toggleDropdown(menu) {
+      menu.classList.toggle("active");
+    }
+
+    function updateMainTitle(event) {
+      var selectedTag = document.getElementById("selectedTag");
+
+      selectedTag.innerText = event.target.innerText;
+      selectedTag.style.display = "inline-block";
+    }
 </script>
 </body>
 
