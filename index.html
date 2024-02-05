@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin+Sketch:wght@700&family=Cabin:wght@400;700&family=Epilogue:wght@400;600;700&family=Homemade+Apple&family=Lato:wght@400;900&family=Love+Ya+Like+A+Sister&family=Nanum+Gothic:wght@400;800&family=Poppins:wght@400;500;700&family=Quicksand:wght@400;500&family=Roboto:wght@400;700&family=Rubik+Vinyl&family=Seaweed+Script&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="maasikas.png">
 </head>
@@ -14,22 +15,48 @@
 <body>
     <div class="main-page">
         <header>
-            <div class="book"></div>
+            <div class="book">
+                <img class="book-image" src="/src/portfolio.png">
 
-            <a href="">
-                <div class="project-button">
-                    <h3>Projects</h3>
-                    <img class="box1" src="./src/box1.png" height="fit-content">
+                <div class="title">
+                    <div class="slide-container" data-cycle="200">
+                        <div class="slide">
+                            <img src="/src/header/p1.png" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="/src/header/p2.png" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="/src/header/p3.png" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="/src/header/p4.png" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="/src/header/p5.png" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="/src/header/p6.png" width="100%">
+                        </div>
+                    </div>
                 </div>
-            </a>
-            <a href="">
-                <div class="about-button">
-                    <h3>About me +<br>Contact</h3>
-                    <img class="box2" src="./src/box2.png" height="fit-content">
-                </div>
-            </a>
+                <h2>by Liis Lepler</h2>
 
-            <div class="menu" onclick="toggleDropdown(this)">
+                <a class="top-menu" onclick="scrollToProjects()">
+                    <div class="project-button">
+                        <h3>Projects</h3>
+                        <img class="box1" src="./src/box1.png" height="fit-content">
+                    </div>
+                </a>
+                <a class="top-menu" onclick="scrollToAboutMe()">
+                    <div class="about-button">
+                        <h3>About me +<br>Contact</h3>
+                        <img class="box2" src="./src/box2.png" height="fit-content">
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu" id="projects" onclick="toggleDropdown(this)">
                 <div class="menu-title">
                   <h3>Projects</h3>
                   <div class="arrow-container">
@@ -38,32 +65,142 @@
                   </div>
                 </div>
                 <div class="dropdown" onclick="updateMainTitle(event)">
-                  <a href="#">UI/UX Design</a>
-                  <a href="#">Graphic Design</a>
-                  <a href="#">Frontend Development</a>
-                  <a href="#">Motion Graphics</a>
-                  <a href="#">Illustrations</a>
+                  <a href="#" data-tag="all">All Projects</a>
+                  <a href="#" data-tag="uiux">UI/UX Design</a>
+                  <a href="#" data-tag="graphic">Graphic Design</a>
+                  <a href="#" data-tag="frontend">Frontend Development</a>
+                  <a href="#" data-tag="motion">Motion Graphics</a>
+                  <a href="#" data-tag="art">Illustrations</a>
                 </div>
             </div>
         </header>
 
         <main>
             <div class="projects">
-                <div>
-                    <img>
-                    <h2>StaChesstics</h2>
-                    <h4>2023-2024</h4>
+                <div data-tags="uiux frontend graphic" onclick="loadProjectDetails('stachesstics.html')">
+                    <img src="/src/thumbnails/stachesstics.png">
+                    <span class="thumb-text">
+                        <h2>StaChesstics</h2>
+                        <p><i><b>internship</b>/website/branding</i></p>
+                    </span>
+                    <h4>2023-2024
+                    </h4>
                 </div>
-                <div>
-                    <img>
-                    <h2>World Simplified</h2>
-                    <h4>2022</h4>
-                </div>
-                <div>
-                    <img>
-                    <h2>Luca Deli</h2>
+                <div data-tags="uiux frontend">
+                    <img src="/src/thumbnails/luca-deli.png">
+                    <span class="thumb-text">
+                        <h2>Luca Deli</h2>
+                        <p><i>website</i></p>
+                    </span>
                     <h4>2024</h4>
                 </div>
+                <div data-tags="uiux graphic frontend">
+                    <img src="/src/thumbnails/world-simplified.png">
+                    <span class="thumb-text">
+                        <h2>World Simplified</h2>
+                        <p><i><b>internship</b>/website</i></p>
+                    </span>
+                    <h4>2022</h4>
+                </div>
+                <div data-tags="uiux">
+                    <img src="/src/thumbnails/bloomi.png">
+                    <span class="thumb-text">
+                        <h2>Bloomi</h2>
+                        <p><i>website</i></p>
+                    </span>
+                    <h4>2024</h4>
+                </div>
+                <div data-tags="graphic art">
+                    <img src="/src/thumbnails/magazine.png">
+                    <span class="thumb-text">
+                        <h2>Distortion</h2>
+                        <p><i>magazine</i></p>
+                    </span>
+                    <h4>2021</h4>
+                </div>
+                <div data-tags="uiux motion">
+                    <img src="/src/thumbnails/icounttime.png">
+                    <span class="thumb-text">
+                        <h2>iCountTime</h2>
+                        <p><i>application</i></p>
+                    </span>
+                    <h4>2022</h4>
+                </div>
+                <div data-tags="uiux frontend">
+                    <img src="/src/thumbnails/trackersaurus.png">
+                    <span class="thumb-text">
+                        <h2>Trackersaurus</h2>
+                        <p><i>application</i></p>
+                    </span>
+                    <h4>2023</h4>
+                </div>
+                <div data-tags="motion art frontend graphic">
+                    <img src="/src/thumbnails/plant-game.png">
+                    <span class="thumb-text">
+                        <h2>The World of Plants</h2>
+                        <p><i>game</i></p>
+                    </span>
+                    <h4>2021</h4>
+                </div>
+                <div data-tags="motion art graphic">
+                    <img src="/src/thumbnails/coffee.png">
+                    <span class="thumb-text">
+                        <h2>The History of Coffee</h2>
+                        <p><i>video 2:57 min</i></p>
+                    </span>
+                    <h4>2022</h4>
+                </div>
+                <div data-tags="uiux frontend">
+                    <img src="/src/thumbnails/exoneuron.png">
+                    <span class="thumb-text">
+                        <h2>Exoneuron</h2>
+                        <p><i><b>internship</b>/website</i></p>
+                    </span>
+                    <h4>2023</h4>
+                </div>
+                <div data-tags="uiux graphic">
+                    <img src="/src/thumbnails/genart.png">
+                    <span class="thumb-text">
+                        <h2>GenArt</h2>
+                        <p><i>branding</i></p>
+                    </span>
+                    <h4>2022</h4>
+                </div>
+                <div data-tags="graphic art">
+                    <img src="/src/thumbnails/book-design.png">
+                    <span class="thumb-text">
+                        <h2>Champion Ott</h2>
+                        <p><i><b>contract</b>/book design</i></p>
+                    </span>
+                    <h4>2021</h4>
+                </div>
+                <div data-tags="frontend">
+                    <img src="/src/thumbnails/note-app.png">
+                    <span class="thumb-text">
+                        <h2>Note</h2>
+                        <p><i>application</i></p>
+                    </span>
+                    <h4>2021</h4>
+                </div>
+                <div data-tags="uiux frontend">
+                    <img src="/src/thumbnails/italian-restaurant.png">
+                    <span class="thumb-text">
+                        <h2>Salerno</h2>
+                        <p><i>website</i></p>
+                    </span>
+                    <h4>2020</h4>
+                </div>
+                <div data-tags="art graphic">
+                    <img src="/src/thumbnails/art.png">
+                    <h2>Illustrations & other art</h2>
+                    <h4>2018-2024</h4>
+                </div>
+            </div>
+
+            <div id="projectDetails"></div>
+
+            <div id="about-me">
+                <h1>About me</h1>
             </div>
         </main>
     </div>
@@ -79,10 +216,123 @@
     }
 
     function updateMainTitle(event) {
-      var selectedTag = document.getElementById("selectedTag");
+        event.preventDefault();
 
-      selectedTag.innerText = event.target.innerText;
-      selectedTag.style.display = "inline-block";
+        var selectedTag = document.getElementById("selectedTag");
+
+        selectedTag.innerText = event.target.innerText;
+        selectedTag.style.display = "inline-block";
+
+        var projects = document.querySelectorAll('.projects div');
+        var chosenTag = event.target.getAttribute("data-tag");
+
+        if (chosenTag === "all") {
+        projects.forEach(project => {
+            project.style.display = "block";
+        });
+        } else {
+        projects.forEach(project => {
+            var projectTags = project.getAttribute("data-tags").split(' ');
+
+            if (projectTags.includes(chosenTag)) {
+            project.style.display = "block";
+            } else {
+            project.style.display = "none";
+            }
+        });
+        }
+    }
+
+    var slideshowContainers = document.getElementsByClassName("slide-container");
+
+    for (let s = 0; s < slideshowContainers.length; s++) {
+        var cycle = slideshowContainers[s].dataset.cycle;
+        var slides = slideshowContainers[s].querySelectorAll('.slide');
+        var slideIndex = 0;
+        showSlides(slides, slideIndex, cycle);
+    }
+
+    function showSlides(slides, slideIndex, cycle) {
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        };
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        };
+
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(function() {
+            showSlides(slides, slideIndex, cycle)
+        }, cycle);
+    }
+
+    function scrollToProjects() {
+      var projectsSection = document.getElementById("projects");
+
+      if (projectsSection) {
+        projectsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+
+    function scrollToAboutMe() {
+      var projectsSection = document.getElementById("about-me");
+
+      if (projectsSection) {
+        projectsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+
+    function loadProjectDetails(projectFile) {
+        var projectDetailsContainer = document.getElementById('projectDetails');
+
+        // Use AJAX to load content from the specified HTML file
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', projectFile, true);
+
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+            projectDetailsContainer.innerHTML = xhr.responseText;
+
+            document.querySelector('.close-btn').addEventListener('click', function() {
+                var projectPopUp = document.getElementById('projectPopUp');
+                projectPopUp.style.display = 'none';
+            });
+
+            } else {
+            console.error('Failed to load project details.');
+            }
+        };
+
+        xhr.send();
+    }
+
+    function showProjectPopUp(content) {
+        var projectDetailsContainer = document.getElementById('projectDetails');
+
+        // Calculate the center of the viewport
+        var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        var top = viewportHeight / 2;
+        var left = viewportWidth / 2;
+
+        // Apply the calculated position to the pop-up
+        projectDetailsContainer.style.top = top + 'px';
+        projectDetailsContainer.style.left = left + 'px';
+
+        // Set the content in the pop-up
+        projectDetailsContainer.innerHTML = content;
+
+        // Show the pop-up
+        projectDetailsContainer.style.display = 'block';
     }
 </script>
 </body>
