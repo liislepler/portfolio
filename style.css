@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap');
+
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -259,37 +261,307 @@ header {
   margin-top: 1.25em;
 }
 
-.project-pop-up {
+/* Project Popup */
+#projectPopUp {
   position: fixed;
   z-index: 1000;
   width: 80vw;
-  height: fit-content;
-  background-color: #FFFCF6;
+  height: 85vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 1em;
-  box-shadow: 0 0 5em rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 10em rgba(0, 0, 0, 1); 
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#projectPopUp::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+#projectPopUp::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+#projectPopUp h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2.5em;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+#projectPopUp h4 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 130%;
+  margin-top: 0;
+}
+
+#projectPopUp .programs {
+  text-align: right;
+}
+
+#projectPopUp p {
+  line-height: 130%;
+}
+
+#projectPopUp .project-header p b {
+  font-weight: 600;
+}
+
+.close-container {
+  text-align: right;
+  position: sticky;
+  top: 0; 
 }
 
 .close-btn {
-  position: absolute;
-  top: 0.2em;
-  right: 0.2em;
   cursor: pointer;
   font-family: 'Epilogue', sans-serif;
   font-weight: 800;
   font-size: 1.5em;
-  color: #000000;
   padding: 1em;
   padding-top: 0.8em;
   padding-bottom: 0.7em;
 }
 
 .close-btn:hover {
-  background-color: #E7B3B8;
+  background-color: #D74E25;
   border-radius: 10em;
+}
+
+/* StaChesstics */
+.stachess {
+  background-color: #000000;
+  color: #ffff;
+}
+
+.stachess div {
+  margin-bottom: 2em;
+}
+
+.stachess .close-btn {
+  color: #ffff;
+}
+
+.stachess .project-header img {
+  width: 80vw;
+}
+
+.stachess p {
+  font-weight: 200;
+}
+
+.stachess p a {
+  color: #ffff;
+  font-weight: 500;
+}
+
+.stachess .video {
+  overflow: hidden;
+  margin-top: 5em;
+}
+
+.stachess .colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.stachess .colors img {
+  padding: 4%;
+  width: 20vw;
+}
+
+.stachess .text {
+  margin: 0 auto;
+  width: 90%;
+  font-weight: 200;
+  line-height: 130%;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.stachess .logo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.stachess .logo img {
+  max-width: 50vw;
+}
+
+.stachess .logo-img {
+  width: 25vw;
+}
+
+.stachess .socials-phone {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.stachess .socials-phone img {
+  width: 35vw;
+  margin-bottom: 1em;
+}
+
+.stachess .socials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.stachess .socials img {
+  width: 35vw;
+  padding: 5%;
+}
+
+.stachess .feedback {
+  text-align: center;
+}
+
+.stachess .feedback img {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.stachess .feedback p {
+  margin: 0 auto;
+  width: 90%;
+  line-height: 130%;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+/* Luca Deli */
+.luca {
+  background-color: #CCFF9A;
+  color: #ffff;
+  background-image: url("/src/luca/greens.png");
+  background-size: auto 100%;
+}
+
+.luca .close-btn {
+  color: #1B381D;
+}
+
+.luca p {
+  font-weight: 300;
+}
+
+.luca .video {
+  overflow: hidden;
+}
+
+.luca .video video {
+  height: auto;
+  margin-top: -1em;
+}
+
+.luca .colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.luca .colors img {
+  padding: 4%;
+  width: 17vw;
+}
+
+.luca .users, .luca .screens {
+  text-align: center;
+}
+
+.luca .users img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.luca .header {
+  width: 100%;
+  margin-top: 3em;
+}
+
+.luca .text {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.luca .screens img {
+  width: 100%;
+}
+
+.luca .packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.luca .packages img {
+  width: 20vw;
+}
+
+/* World Simplified */
+.world {
+  background-color: #F6F8FA;
+  color: #0B3D5F;
+}
+
+.world .close-btn {
+  color: #0B3D5F;
+}
+
+.world .slider-container {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.world .screens {
+  display: flex;
+  width: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.world img {
+  width: 100%;
+  margin: auto;
+  flex: 0 0 auto;
+}
+
+.world .slider-btn {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: -19.5em;
+  margin-left: 8.8%;
+}
+
+.world .slider-btn button {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #CCFF9A;
+  border: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding: 0;
 }
 
 @media (min-width: 520px) and (max-width: 767px) {
@@ -353,6 +625,30 @@ header {
   }
   .projects div {
     margin-bottom: 2em;
+  }
+
+  /* Project Popup */
+  #projectPopUp {
+    padding: 2em;
+  }
+  #projectPopUp h2 {
+    font-size: 4em;
+  }
+
+  /* StaChesstics */
+  .stachess .project-header p {
+    width: 70vw;
+  }
+  .stachess .text, .stachess .feedback p {
+    width: 70%;
+  }
+  .stachess .feedback img {
+    width: 60vw;
+  }
+
+  /* Luca Deli */
+  .luca .text {
+    width: 40vw;
   }
 }
 
@@ -435,8 +731,94 @@ header {
     margin-top: 1.2em;
     font-size: 0.8em;
   }
-  .project-pop-up {
-    width: 705w;
+
+  /* Project Popup */
+  #projectPopUp {
+    width: 75vw;
+    padding: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  #projectPopUp h2 {
+    font-size: 8em;
+  }
+  #projectPopUp h4 {
+    font-size: 1.2em;
+  }
+  #projectPopUp .project-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #projectPopUp .project-details h4 {
+    width: 35%;
+  }
+
+  /* StaChesstics */
+  .stachess .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stachess .project-header img {
+    width: 50vw;
+  }  
+  .stachess .project-header p {
+    padding-right: 2em;
+    width: 25vw;
+  }
+  .stachess .colors img {
+    width: 15vw;
+  }
+  .stachess .text, .stachess .feedback p {
+    width: 45%;
+  }
+  .stachess .logo img {
+    max-width: 40vw;
+  }  
+  .stachess .logo-img {
+    width: 20vw;
+  }
+  .stachess .socials-phone {
+    width: 70%;
+  }
+  .stachess .socials-phone img {
+    width: 25vw;
+  }
+  .stachess .feedback img {
+    width: 40vw;
+  }
+  
+  /* Luca Deli */
+  .luca .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .luca .project-header .video {
+    width: 50vw;
+  }  
+  .luca .colors img {
+    width: 20vw;
+  }
+  .luca .project-header p {
+    padding-right: 1em;
+    width: 20vw;
+    margin-top: 0;
+  }
+  .luca .colors img {
+    width: 15vw;
+  }
+  .luca .users {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .luca .users img {
+    width: 35vw;
+  }
+  .luca .screens img {
+    width: 55vw;
+  }
+  .luca .text {
+    width: 30vw;
   }
 }
 
