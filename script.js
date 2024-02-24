@@ -93,7 +93,7 @@ function loadProjectDetails(projectFile) {
 
           // Create a script element
           var scriptElement = document.createElement('script');
-          scriptElement.src = '/popup.js'; // Adjust the path accordingly
+          scriptElement.src = './popup.js'; // Adjust the path accordingly
 
           // Append the script to the head of the document
           document.head.appendChild(scriptElement);
@@ -152,12 +152,7 @@ function closePopUpOutside(event) {
   }
 }
 
-/*function toggleDropdown(dropdown) {
-  dropdown.classList.toggle('active');
-  const dropdownContent = dropdown.querySelector('.content');
-  dropdownContent.style.display = dropdown.classList.contains('active') ? 'block' : 'none';
-  dropdown.querySelector('span').innerHTML = dropdown.classList.contains('active') ? 'Close details' : 'See details';
-}*/
+
 
 
 
