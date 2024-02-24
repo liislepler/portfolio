@@ -152,5 +152,12 @@ function closePopUpOutside(event) {
   }
 }
 
+/*function toggleDropdown(dropdown) {
+  dropdown.classList.toggle('active');
+  const dropdownContent = dropdown.querySelector('.content');
+  dropdownContent.style.display = dropdown.classList.contains('active') ? 'block' : 'none';
+  dropdown.querySelector('span').innerHTML = dropdown.classList.contains('active') ? 'Close details' : 'See details';
+}*/
+
 
 

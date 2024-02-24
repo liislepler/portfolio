@@ -33,6 +33,16 @@ a {
 
 p {
   font-family: 'Epilogue', sans-serif;
+  line-height: 130%;
+}
+
+p b {
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10em;
 }
 
 /* Header */
@@ -210,10 +220,10 @@ header {
   margin: 0 auto;
   margin-top: 4em;
   width: 90vw;
-  padding-bottom: 5em;
+  padding-bottom: 1em;
 }
 
-.projects h2 {
+.projects h2, .work h2 {
   font-family: 'Epilogue', sans-serif;
   font-weight: 600;
   margin-bottom: 0.3em;
@@ -221,7 +231,7 @@ header {
   font-size: 1.5em;
 }
 
-.projects h4 {
+.projects h4, .work h4 {
   font-family: 'Epilogue', sans-serif;
   font-weight: 300;
   margin: 0;
@@ -238,11 +248,11 @@ header {
   width: 100%;
 }
 
-.projects div:hover {
+.projects div:hover, .work div:hover {
   cursor: pointer;
 }
 
-.projects div:hover img {
+.projects div:hover img, .work div:hover img {
   transform: scale(1.03);
 }
 
@@ -260,6 +270,101 @@ header {
   margin-left: 0.5em;
   margin-top: 1.25em;
 }
+
+/* About me */
+#about-me {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+#about-me h1 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2.8em;
+  margin: 0;
+  margin-bottom: 0.2em;
+  color: #000;
+}
+
+.about-header img {
+  width: 100%;
+}
+
+.about-header p {
+  line-height: 130%;
+}
+
+.contact h2, .skills h2, .experience .h2, .education h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  margin: 0;
+  color: #D74E25;
+  margin-top: 1.5em;
+}
+
+.contact p {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.contact .under {
+  margin-bottom: 1.5em;
+}
+
+.skills .grid .focus p {
+  padding: 1em;
+  border-radius: 2em;
+  background-color: #F0EFE4;
+  font-weight: 600;
+  font-size: 1.2em;
+  max-width: 15em;
+  text-align: center;
+}
+
+.skills .software h3, .skills .web h3, .work h3, .school h3 {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+.work img, .school img {
+  width: 100%;
+}
+
+.work {
+  margin-bottom: 3em;
+}
+
+.school {
+  margin-bottom: 4em;
+}
+
+.school .program {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  margin: 0;
+  margin-top: 0.5em;
+  color: #D74E25;
+}
+
+.school .degree {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+.school-img {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
 
 /* Project Popup */
 #projectPopUp {
@@ -305,14 +410,6 @@ header {
 
 #projectPopUp .programs {
   text-align: left;
-}
-
-#projectPopUp p {
-  line-height: 130%;
-}
-
-#projectPopUp .project-header p b {
-  font-weight: 600;
 }
 
 .close-container {
@@ -914,9 +1011,36 @@ header {
   }
   .projects {
     width: 60vw;
+    padding-bottom: 2em;
   }
   .projects div {
     margin-bottom: 2em;
+  }
+
+  /* About Me */
+  #about-me h1 {
+    font-size: 4em;
+  }
+  .about-header p {
+    width: 80%;
+  }
+  .contact h2, .skills h2, .experience .h2, .education h2 {
+    font-size: 3.5em;
+  }
+  .skills .software h3, .skills .web h3, .work h3, .school h3 {
+    font-size: 2.5em;
+  }
+  .work img {
+    width: 70%;
+  }
+  .work .text, .school .text {
+    width: 80%;
+  }
+  .school .program {
+    font-size: 2em;
+  }
+  .school .degree {
+    font-size: 1.3em;
   }
 
   /* Project Popup */
@@ -1004,6 +1128,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
     margin-top: 5em;
+    padding-bottom: 3em;
   }
   .projects h4 {
     margin-bottom: 0;
@@ -1012,17 +1137,71 @@ header {
     padding: 0.5em;
     margin-bottom: 2em;
   }
-  .projects h2 {
+  .projects h2, .work h2 {
     font-weight: 600;
     font-size: 1.5em;
   }
-  .projects h4 {
+  .projects h4, .work h4 {
     font-weight: 300;
     font-size: 1em;
   }
   .thumb-text p {
     margin-top: 1.2em;
     font-size: 0.8em;
+  }
+
+  /* About Me */
+  #about-me {
+    width: 80vw;
+  }
+  #about-me h1 {
+    font-size: 8em;
+  }
+  .about-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-header img {
+    width: 55vw;
+  } 
+  .about-header p {
+    width: 22vw;
+  }
+  .contact h2, .skills h2, .experience .h2, .education h2 {
+    font-size: 5em;
+    margin-top: 0.5em;
+  }
+  .skills .software h3, .skills .web h3, .work h3, .school h3 {
+    font-size: 3em;
+  } 
+  .skills .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+  .experience .view {
+    display: grid;
+    grid-template-columns: repeat(2, 60% 40%);
+  }
+  .education .view2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50% 50%);
+  }
+  .view .text, .view2 .text {
+    width: 35vw;
+    margin-top: 2em;
+  }
+  .view img {
+    width: 30vw;
+  }
+  .view2 img {
+    width: 20vw;
+  }
+  .school .program {
+    font-size: 2.3em;
+  }
+  .school .degree {
+    font-size: 1.4em;
   }
 
   /* Project Popup */
