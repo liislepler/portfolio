@@ -60,11 +60,11 @@ function initializeSlider2(containerSelector, cycle, numScreens) {
   }
 }
 
-// Example usage for the first slider
 initializeSlider('.screens-container', 4000, 8);
-// Example usage for the second slider
 initializeSlider2('.screens-container2', 2000, 4);
-
+initializeSlider2('.screens-container3', 4000, 19);
+initializeSlider2('.screens-container4', 5000, 3);
+initializeSlider2('.screens-container5', 3000, 3);
 
 var slideshowContainers = document.getElementsByClassName("title-container");
 

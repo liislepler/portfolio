@@ -291,6 +291,7 @@ header {
   font-size: 2.8em;
   margin: 0;
   margin-top: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 #projectPopUp h4 {
@@ -345,7 +346,7 @@ header {
   width: 80vw;
 }
 
-.stachess p, .magazine p {
+.stachess p, .magazine p, .genart p {
   font-weight: 200;
 }
 
@@ -488,7 +489,7 @@ header {
   margin-top: 3em;
 }
 
-.luca .text, .world .text, .timer .text {
+.luca .text, .world .text, .timer .text, .genart .text, .tracker .text {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 2em;
@@ -549,7 +550,7 @@ header {
   margin-bottom: 1em;
 }
 
-.world .screens-container, .timer .screens-container2 {
+.world .screens-container, .timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -557,7 +558,7 @@ header {
   margin-bottom: 2em;
 }
 
-.world .screens, .timer .screens {
+.world .screens, .timer .screens, .genart .screens, .champion .screens, .art .screens {
   display: flex;
   width: 100%;
   transition: transform 0.7s ease-in-out;
@@ -709,6 +710,152 @@ header {
   margin-bottom: 2em;
 }
 
+/* GenArt */
+.genart {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.genart img, .genart video {
+  width: 100%;
+}
+
+.genart .overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.genart .text, .tracker .text {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* Champion Ott */
+.champion {
+  background-color: #CCE5F9;
+  color: #1D5464;
+}
+
+.champion img {
+  width: 100%;
+}
+
+.champion .project-header, .salerno .project-header, .tracker .project-header {
+  margin-bottom: 4em;
+}
+
+.champion p a {
+  color: #1D5464;
+}
+
+/* Note */
+.note {
+  background-color: #F3F1DE;
+  color: #000;
+}
+
+.note img {
+  width: 100%;
+}
+
+.note .colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.note .colors img {
+  padding: 4%;
+  width: 12vw;
+}
+
+/* Salerno */
+.salerno {
+  background-color: #E2CAB2;
+  color: #262a38;
+}
+
+.salerno img {
+  width: 100%;
+}
+
+/* Tracker */
+.tracker {
+  background-color: #DAF0A6;
+  color: #000;
+}
+
+.tracker img, .tracker .video {
+  width: 100%;
+}
+
+.tracker .overview {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tracker .overview img {
+  width: 90%;
+  margin-bottom: 2em;
+}
+
+/* Bloomi */
+.bloomi {
+  background-color: #E8CDCF;
+  color: #71a48f;
+}
+
+.bloomi img, .bloomi .video {
+  width: 100%;
+}
+
+.bloomi .colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.bloomi .colors img {
+  padding: 4%;
+  width: 12vw;
+}
+
+.bloomi .overview {
+  margin-top: 2em;
+}
+
+.bloomi .overview img {
+  margin-bottom: 2em;
+}
+
+/* Art */
+.art {
+  background-color: #E8CDCF;
+  color: #68ae7e;
+}
+
+.art img {
+  width: 100%;
+}
+
+.art .screen {
+  width: 100%;
+}
+
+.art div {
+  margin-bottom: 2em;
+}
+
+.art .paintings img, .art .digital img {
+  margin-bottom: 2em;
+}
+
 @media (min-width: 520px) and (max-width: 767px) {
   header {
     height: 18em;
@@ -784,14 +931,11 @@ header {
   }
 
   /* StaChesstics */
-  .stachess .text, .stachess .feedback p {
-    width: 70%;
-  }
   .stachess .feedback img {
     width: 60vw;
   }
 
-  .luca .text, .world .text, .timer .text, .plants .text, .coffee .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text {
     width: 40vw;
   }
 
@@ -890,6 +1034,7 @@ header {
   }
   #projectPopUp h2 {
     font-size: 8em;
+    margin-bottom: 0;
   }
   #projectPopUp h4 {
     font-size: 1.2em;
@@ -923,9 +1068,6 @@ header {
   }
   .stachess .colors img {
     width: 15vw;
-  }
-  .stachess .text, .stachess .feedback p, .world .text {
-    width: 45%;
   }
   .stachess .logo img {
     max-width: 40vw;
@@ -968,7 +1110,7 @@ header {
   .luca .screenshots img, .timer .screenshots img {
     width: 55vw;
   }
-  .luca .text, .world .text, .timer .text, .plants .text, .coffee .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text {
     width: 30vw;
   }
 
@@ -1020,10 +1162,10 @@ header {
   .timer .project-header p {
     width: 22vw;
   }
-  .timer .screens-container2 {
+  .timer .screens-container2, .genart .screens-container3, .champion .screens-container4 {
     width: 60vw;
   }
-  .timer .screens {
+  .timer .screens, .genart .screens, .champion .screens {
     width: 60vw;
   }
 
@@ -1037,6 +1179,112 @@ header {
   } 
   .exoneuron .project-header p {
     width: 22vw;
+  }
+
+  /* GenArt */
+  .genart .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .genart .project-header .video {
+    width: 50vw;
+  } 
+  .genart .project-header p {
+    width: 22vw;
+  }
+
+  /* Champion Ott */
+  .champion .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .champion .project-header img {
+    width: 45vw;
+  } 
+  .champion .project-header p {
+    width: 22vw;
+  }
+
+  /* Note */
+  .note .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .note .project-header img {
+    width: 50vw;
+  } 
+  .note .project-header p {
+    width: 22vw;
+  }
+  .note .overview {
+    margin: 0 auto;
+    width: 60vw;
+  }
+
+  /* Salerno */
+  .salerno .project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .salerno .project-header img {
+    width: 50vw;
+  } 
+  .salerno .project-header p {
+    width: 22vw;
+  }
+
+  /* Tracker */
+  .tracker .project-header, .tracker .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  .tracker .project-header .video {
+    width: 40vw;
+  } 
+  .tracker .project-header p {
+    width: 25vw;
+  }
+  
+  /* Bloomi */
+  .bloomi .project-header, .bloomi .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  .bloomi .project-header .video {
+    width: 40vw;
+  } 
+  .bloomi .project-header p {
+    width: 28vw;
+  }  
+  .bloomi .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+
+  /* Art */
+  .art .project-header, .art .paintings, .art .digital {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  .art .project-header img {
+    width: 40vw;
+  } 
+  .art .project-header p {
+    width: 28vw;
+  } 
+  .art .screens-container5  {
+    width: 50vw;
+  }
+  .art .char {
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
   }
 }
 
