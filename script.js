@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
   setTimeout(function () {
     document.getElementById('loading').classList.add('hidden');
-  }, 3000);
+  }, 1000);
 });
 
 function toggleDropdown(menu) {

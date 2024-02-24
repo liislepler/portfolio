@@ -55,7 +55,7 @@ footer {
 }
 
 #loading.hidden {
-  display: none;
+  opacity: 0;
 }
 
 /* Header */
