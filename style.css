@@ -46,11 +46,16 @@ footer {
   align-items: center;
   z-index: 1000;
   background-color:  #FFFCF6;
+  transition: opacity 0.5s ease;
 }
 
 #loading img {
   width: 10em; 
   height: 10em; 
+}
+
+#loading.hidden {
+  opacity: 0;
 }
 
 /* Header */
