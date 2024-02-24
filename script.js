@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.getElementById('loading').style.display = 'flex';
+  
+  setTimeout(function () {
+    document.getElementById('loading').style.display = 'none';
+  }, 3000); 
+});
+
 function toggleDropdown(menu) {
 menu.classList.toggle("active");
 }
@@ -148,14 +157,6 @@ function closePopUpOutside(event) {
       document.removeEventListener('click', closePopUpOutside);
   }
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('loading').style.display = 'flex';
-
-  setTimeout(function () {
-    document.getElementById('loading').classList.add('hidden');
-  }, 1000); 
-});
 
 
 
