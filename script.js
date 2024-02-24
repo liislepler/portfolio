@@ -1,6 +1,5 @@
-$(window).load(function() {
-  $(".se-pre-con").fadeOut("slow");;
-});
+
+
 function toggleDropdown(menu) {
 menu.classList.toggle("active");
 }
