@@ -772,19 +772,19 @@ header {
 .plants .play {
   position: absolute;
   z-index: 1000;
-  left: 40%;
-  top: 140vh;
-  width: 20vw;
+  left: 30%;
+  top: 40%;
+  width: 35vw;
 }
 
 .plants .play:hover {
-  top: 135vh;
+  top: 45%;
 }
 
 .plants .text {
   width: 100%;
   margin: 0 auto;
-  margin-top: 6em;
+  margin-top: 2em;
 }
 
 /* Coffee */
@@ -1360,6 +1360,17 @@ header {
   }
   .timer .screens, .genart .screens, .champion .screens {
     width: 60vw;
+  }
+
+  /* Plants */
+  .plants .play {
+    left: 35%;
+    top: 70%;
+    width: 30vw;
+  }
+  
+  .plants .play:hover {
+    top: 75%;
   }
 
    /* Exoneuron */
