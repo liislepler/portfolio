@@ -55,7 +55,7 @@ footer {
 
 header {
   position: relative;
-  background-image: url("/src/paper.png");
+  background-image: url("./src/paper.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -538,7 +538,7 @@ header {
 .luca {
   background-color: #CCFF9A;
   color: #ffff;
-  background-image: url("/src/luca/greens.png");
+  background-image: url("./src/luca/greens.png");
   background-size: auto 100%;
 }
 
