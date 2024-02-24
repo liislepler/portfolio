@@ -1,8 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-
+window.addEventListener('load', function () {
   setTimeout(function () {
     document.getElementById('loading').classList.add('hidden');
-  }, 3000); 
+  }, 3000);
 });
 
 function toggleDropdown(menu) {
