@@ -152,6 +152,14 @@ function closePopUpOutside(event) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('loading').style.display = 'flex';
+
+  setTimeout(function () {
+    document.getElementById('loading').style.display = 'none';
+  }, 1000); 
+});
+
 
 
 

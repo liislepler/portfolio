@@ -45,6 +45,24 @@ footer {
   margin-top: 10em;
 }
 
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color:  #FFFCF6;
+}
+
+#loading img {
+  width: 10em; 
+  height: 10em; 
+}
+
 /* Header */
 .main-page {
   background-color: #FFFCF6;
