@@ -1180,10 +1180,10 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
   .about-header img {
-    width: 55vw;
+    width: 50vw;
   } 
   .about-header p {
-    width: 22vw;
+    width: 27vw;
   }
   .contact h2, .skills h2, .experience .h2, .education h2 {
     font-size: 5em;
