@@ -117,7 +117,9 @@ function loadProjectDetails(projectFile) {
               projectPopUp.style.display = 'none';
               
               const videoElement = document.querySelector('.video video');
-              videoElement.pause();
+              if (videoElement) {
+                  videoElement.pause();
+              }
           });
 
           document.addEventListener('click', closePopUpOutside);
@@ -159,7 +161,9 @@ function closePopUpOutside(event) {
       // Hide the pop-up
       projectPopUp.style.display = 'none';
       const videoElement = document.querySelector('.video video');
-      videoElement.pause();
+      if (videoElement) {
+          videoElement.pause();
+      }
 
       // Remove the event listener to prevent unwanted behavior
       document.removeEventListener('click', closePopUpOutside);
