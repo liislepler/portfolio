@@ -74,17 +74,18 @@ header {
   background-repeat: no-repeat;
   margin: 0 auto;
   width: 100vw;
-  height: 180vh;
+  height: fit-content;
   z-index: 1;
   border-bottom: 0.2em solid #D74E25;
 }
 
 .header-img img {
-  height: 100vh;
+  height: 45em;
 }
 
 .header-img {
   text-align: center;
+  height: 45em;
 }
 
 .header-text {
@@ -947,7 +948,7 @@ header {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1049px) {
   header {
-    height: 100vh;
+    height: fit-content;
   }
   .header-content {
     width: 90vw;
@@ -1032,7 +1033,7 @@ header {
 /* Desktop */
 @media (min-width: 1050px) {
   header {
-    height: 100vh;
+    height: fit-content;
   }
   .header-content {
     width: 80vw;
