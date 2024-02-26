@@ -84,6 +84,17 @@ if (projectsSection) {
 }
 }
 
+function scrollToExperience() {
+  var projectsSection = document.getElementById("experience");
+  
+  if (projectsSection) {
+    projectsSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+  }
+
 function loadProjectDetails(projectFile) {
   var projectDetailsContainer = document.getElementById('projectDetails');
 

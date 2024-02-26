@@ -17,67 +17,52 @@
 
     <div class="main-page">
         <header>
-            <div class="book">
-                <img class="book-image" src="./src/portfolio.png">
-
-                <div class="title">
-                    <div class="slide-container" data-cycle="200">
-                        <div class="slide">
-                            <img src="./src/header/p1.png" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="./src/header/p2.png" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="./src/header/p3.png" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="./src/header/p4.png" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="./src/header/p5.png" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="./src/header/p6.png" width="100%">
-                        </div>
-                    </div>
+            <div class="header-content">
+                <div class="header-img">
+                    <img src="./src/me.png">
                 </div>
-                <h2>by Liis Lepler</h2>
 
-                <a class="top-menu" onclick="scrollToProjects()">
-                    <div class="project-button">
-                        <h3>Projects</h3>
-                        <img class="box1" src="./src/box1.png" height="fit-content">
-                    </div>
-                </a>
-                <a class="top-menu" onclick="scrollToAboutMe()">
-                    <div class="about-button">
-                        <h3>About me +<br>Contact</h3>
-                        <img class="box2" src="./src/box2.png" height="fit-content">
-                    </div>
-                </a>
-            </div>
+                <div class="header-text">
+                    <h1>Hello,<br> I am Liis</h1>
+                    <p>I'm a <b>UI/UX designer</b>, <b>web developer</b> and a <b>digital designer</b>.</p>
+                    <p>This <b>portfolio</b> highlights the professional work and projects I've had the privilege to be part of in the past few years.</p>
+                    <p><b>Feel free to reach out to me!</b><br>liislepler@gmail.com</p>
 
-            <div class="menu" id="projects" onclick="toggleDropdown(this)">
-                <div class="menu-title">
-                  <h3>Projects</h3>
-                  <div class="arrow-container">
-                    <div class="arrow"></div>
-                    <div class="tag" id="selectedTag"></div>
-                  </div>
-                </div>
-                <div class="dropdown" onclick="updateMainTitle(event)">
-                  <a href="#" data-tag="all">All Projects</a>
-                  <a href="#" data-tag="uiux">UI/UX Design</a>
-                  <a href="#" data-tag="graphic">Graphic Design</a>
-                  <a href="#" data-tag="frontend">Frontend Development</a>
-                  <a href="#" data-tag="motion">Motion Graphics</a>
-                  <a href="#" data-tag="art">Illustrations</a>
+                    <div class="header-buttons">
+                        <button onclick="scrollToProjects()">
+                            <h2>Projects</h2>
+                        </button>
+                        <button onclick="scrollToAboutMe()">
+                            <h2>About me</h2>
+                        </button>
+                        <button onclick="scrollToExperience()">
+                            <h2>Experience</h2>
+                        </button>
+                    </div>
                 </div>
             </div>
+            
         </header>
 
         <main>
+            <div class="menu" id="projects" onclick="toggleDropdown(this)">
+                <div class="menu-title">
+                    <h3>Projects</h3>
+                    <div class="arrow-container">
+                    <div class="arrow"></div>
+                    <div class="tag" id="selectedTag"></div>
+                    </div>
+                </div>
+                <div class="dropdown" onclick="updateMainTitle(event)">
+                    <a href="#" data-tag="all">All Projects</a>
+                    <a href="#" data-tag="uiux">UI/UX Design</a>
+                    <a href="#" data-tag="graphic">Graphic Design</a>
+                    <a href="#" data-tag="frontend">Frontend Development</a>
+                    <a href="#" data-tag="motion">Motion Graphics</a>
+                    <a href="#" data-tag="art">Illustrations</a>
+                </div>
+            </div>
+
             <div class="projects">
                 <div data-tags="uiux frontend graphic" onclick="loadProjectDetails('stachesstics.html')">
                     <img src="./src/thumbnails/stachesstics.png">
@@ -202,11 +187,11 @@
             <div id="projectDetails"></div>
 
             <div id="about-me">
-                <h1>Hello, I am Liis</h1>
+                <h1>About me</h1>
 
                 <div class="about-header">
                     <div>
-                        <p>I'm a <b>UI/UX designer and web developer</b>, from Estonia but currently <b>based in Gothenburg, Sweden</b>. My expertise spans <b>UI/UX design, graphic design, and frontend development</b>, with a Bachelor’s degree in Informatics specializing in <b>New Media Design</b>. While my primary focus lies in these areas, I'm constantly seeking opportunities to broaden my knowledge across all aspects of digital design and web development. I'm deeply passionate about bringing creativity to every project and workplace.</p>
+                        <p>My name is <b>Liis Lepler</b> and I'm a <b>UI/UX designer, web developer, and a digital designer</b>, from Estonia but currently <b>based in Gothenburg, Sweden</b>. My expertise spans <b>UI/UX design, graphic design, and frontend development</b>, with a Bachelor’s degree in Informatics specializing in <b>New Media Design</b>. While my primary focus lies in these areas, I'm constantly seeking opportunities to broaden my knowledge across all aspects of digital design and web development. I'm deeply passionate about bringing creativity to every project and workplace.</p>
                         <p>This portfolio highlights the <b>professional work and projects</b> I've had the privilege to be part of in the past few years.</p>  
                         <div class="contact">
                             <h2>Contact</h2>
@@ -238,6 +223,7 @@
                             <p>Photoshop</p>
                             <p>InDesign</p>
                             <p>Illustrator</p>
+                            <p>Adobe XD</p>
                             <p>Premiere Pro</p>
                             <p>After Effects</p>
                         </div>
@@ -254,11 +240,12 @@
                     </div>
                 </div>
 
-                <div class="experience">
+                <div class="experience" id="experience">
                     <h2 class="h2">Experience</h2>
 
                     <div class="work">
                         <h3>Frontend Developer</h3>
+                        <h5 class="degree">StaChesstics</h5>
                         <div class="view">
                             <div class="text">
                                 <p>During my internship at <b>StaChesstics</b>, my role as a Frontend Developer expanded beyond its initial scope. <b>I played a key role in shaping the platform's identity</b> by creating a new graphical profile, which included designing a new logo, selecting colors and typefaces, and overseeing the UI/UX design to enhance the overall user experience.</p>
@@ -279,6 +266,7 @@
 
                     <div class="work">
                         <h3>UI/UX Designer</h3>
+                        <h5 class="degree">World Simplified</h5>
                         <div class="view">
                             <div class="text">
                                 <p>My internship at <b>World Simplified</b> as a UI/UX Designer was an incredibly enriching experience. When I joined the startup, it was in its early stages, still finding its visual identity. I had the opportunity to contribute to <b>revamping their graphical profile</b>, including adjusting the color scheme and aligning the logo with the new design.</p>
@@ -298,6 +286,7 @@
 
                     <div class="work">
                         <h3>Designer</h3>
+                        <h5 class="degree">OT Service</h5>
                         <div class="view">
                             <div class="text">
                                 <p>I had an opportunity to contribute to a <b>book publishing process</b>. The marketing team of <b>Ott Tänak, World Rally Champion from Estonia</b>, reached out to me for designing the content of a children's coloring and story book that narrates his early beginnings. Using <b>InDesign</b>, I handled the layouting of the book and created the front and back covers with the provided materials.</p>
@@ -321,7 +310,7 @@
                     <div class="school">
                         <h3>Jönköping University</h3>
                         <h4 class="program">New Media Design</h4>
-                        <h4 class="degree">Bachelor's degree in Informatics</h4>
+                        <h5 class="degree">Bachelor's degree in Informatics</h5>
 
                         <div class="view2">
                             <div class="text">
@@ -340,7 +329,7 @@
                     <div class="school">
                         <h3>Pelgulinna Gümnaasium</h3>
                         <h4 class="program">Arts</h4>
-                        <h4 class="degree">Upper-secondary education</h4>
+                        <h5 class="degree">Upper-secondary education</h5>
 
                         <div class="view2">
                             <div class="text">
