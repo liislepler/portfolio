@@ -69,35 +69,36 @@ footer {
 
 header {
   position: relative;
-  background-image: url("src/paper.png");
+  background-image: url("src/mephone.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   margin: 0 auto;
   width: 100vw;
   height: fit-content;
   z-index: 1;
-  border-bottom: 0.2em solid #D74E25;
-}
-
-.header-img img {
-  height: 45em;
-}
-
-.header-img {
-  text-align: center;
-  height: 45em;
 }
 
 .header-text {
+  font-family: 'Epilogue', sans-serif;
   width: 80vw;
+  height: 100vh;
   margin: 0 auto;
+  color: white;
 }
 
 .header-text h1 {
-  font-family: 'Epilogue', sans-serif;
-  font-weight: 800;
-  font-size: 4.5em;
+  font-weight: 600;
+  font-size: 3.3em;
   margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 2em;
+}
+
+.header-text h2 {
+  font-weight: 600;
+  font-size: 2.4em;
+  line-height: 150%;
 }
 
 .header-buttons {
@@ -110,22 +111,21 @@ header {
 .header-buttons button {
   width: 15em;
   margin-bottom: 1em;
- background-color: transparent;
- border-radius: 0.2em;
- border: none;
- text-decoration: underline;
- cursor: pointer;
-}
-
-.header-buttons button:hover {
-  color: #D74E25;
+  background-color: transparent;
+  border-radius: 0.2em;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .header-buttons button h2 {
   margin: 0.5em;
-  font-family: 'Special Elite', cursive;
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: 200;
+}
+
+.header-buttons button h2:hover {
+  text-decoration: underline;
 }
 
 .menu {
@@ -133,7 +133,7 @@ header {
   display: inline-block;
   margin-left: 5%;
   margin-top: 0.8em;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Epilogue', sans-serif;
   font-size: 1.4em;
   font-weight: 500;
 }
@@ -159,7 +159,7 @@ header {
 }
 
 .menu a {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Epilogue', sans-serif;
   font-size: 0.8em;
   font-weight: 500;
   padding-bottom: 0.4em;
@@ -948,27 +948,29 @@ header {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1049px) {
   header {
-    height: fit-content;
+    background-image: url("src/metablet.png");
+  }  
+  .header-text h1 {
+    font-size: 4em;
   }
-  .header-content {
-    width: 90vw;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-    margin: 0 auto;
+  .header-text h2 {
+    font-size: 2.8em;
   }
-  .header-text {
-    margin-top: 4em;
-    width: fit-content;
+  .header-text p {
+    font-size: 1.2em;
   }
   .header-buttons {
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 30em;
   }
   .header-buttons button {
     text-align: left;
+    width: 10em;
   }
   .header-buttons button h2 {
     margin-left: 0;
+    font-size: 1.2em;
   }
   .projects {
     width: 60vw;
@@ -1033,29 +1035,31 @@ header {
 /* Desktop */
 @media (min-width: 1050px) {
   header {
-    height: fit-content;
-  }
-  .header-content {
-    width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-  }
-  .header-text {
-    margin-top: 3em;
-    width: fit-content;
-  }
+    background-image: url("src/me.png");
+  }  
   .header-text h1 {
+    font-size: 6em;
+  }
+  .header-text h2 {
     font-size: 5em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .header-text p {
+    font-size: 1.2em;
   }
   .header-buttons {
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50em;
+    margin-top: 8em;
   }
   .header-buttons button {
     text-align: left;
   }
   .header-buttons button h2 {
     margin-left: 0;
+    font-size: 1.5em;
   }
   .menu {
     margin-top: 1.5em;
@@ -1433,9 +1437,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
     width: 80vw;
     grid-gap: 2em;
-  }
-  .header-text h1 {
-    font-size: 6em;
   }
 }
 

@@ -165,11 +165,24 @@ function closePopUpOutside(event) {
           videoElement.pause();
       }
 
-      // Remove the event listener to prevent unwanted behavior
       document.removeEventListener('click', closePopUpOutside);
   }
 }
 
+const positions = ["UI/UX Designer", "Graphic Designer", "Frontend Developer", "Digital Designer", "Creative Thinker"];
+  
+function updatePositionText() {
+  const positionText = document.getElementById("position-text");
+  let index = 0;
+  
+  setInterval(() => {
+    positionText.textContent = `I am a ${positions[index]}`;
+    index = (index + 1) % positions.length;
+  }, 1000);
+
+}
+
+window.onload = updatePositionText;
 
 
 
