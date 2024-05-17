@@ -21,7 +21,7 @@ a {
   color: black;
 }
 
-p {
+p, li {
   font-family: 'Epilogue', sans-serif;
   line-height: 130%;
 }
@@ -639,7 +639,7 @@ header {
   margin-bottom: 1em;
 }
 
-.world .screens-container, .timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5 {
+.timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5, .jemu .screens-container6 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -647,7 +647,7 @@ header {
   margin-bottom: 2em;
 }
 
-.world .screens, .timer .screens, .genart .screens, .champion .screens, .art .screens {
+.timer .screens, .genart .screens, .champion .screens, .art .screens, .jemu .screens {
   display: flex;
   width: 100%;
   transition: transform 0.7s ease-in-out;
@@ -657,25 +657,6 @@ header {
   width: 100%;
   margin: auto;
   flex: 0 0 auto;
-}
-
-.world .slider-btn {
-  display: flex;
-  width: 85%;
-  justify-content: space-around;
-  position: absolute;
-  margin-top: -1em;
-}
-
-.world .slider-btn button {
-  font-size: 24px;
-  cursor: pointer;
-  background-color: #DAF2F2;
-  border: none;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  padding: 0;
 }
 
 .world .second {
@@ -945,6 +926,50 @@ header {
   margin-bottom: 2em;
 }
 
+/* JEMU */
+.jemu {
+  background-color: #FFF9F6;
+  color: #1D1E4C;
+}
+
+.jemu img {
+  width: 100%;
+}
+
+.jemu h3 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2.2em;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.jemu .overview {
+  text-align: center;
+}
+
+.jemu .wishes {
+  text-align: left;
+  margin-top: 1em;
+}
+
+.jemu .overview img {
+  width: 80%;
+}
+
+.jemu .overview ul {
+  padding-left: 1em;
+}
+
+.jemu .overview ul li {
+  padding-bottom: 1em;
+}
+
+.jemu .linkedin img {
+  margin-bottom: 1em;
+}
+
+
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1049px) {
   header {
@@ -1022,13 +1047,17 @@ header {
     width: 60vw;
   }
 
-  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text {
     width: 40vw;
   }
 
   /* Magazine */
   .magazine .title-container {
     height: 10em;
+  }
+
+  .jemu ul {
+    width: 60%;
   }
 }
 
@@ -1241,7 +1270,7 @@ header {
   .luca .screenshots img, .timer .screenshots img {
     width: 55vw;
   }
-  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text {
     width: 30vw;
   }
 
@@ -1259,13 +1288,7 @@ header {
   .world .logo {
     width: 50vw;
   }
-  .world .screens-container {
-    width: 70%;
-  }
-  .world .slider-btn {
-    margin-left: 1.4%;
-  }
-  
+
   /* Magazine */
   .magazine .project-header {
     display: grid;
@@ -1401,8 +1424,6 @@ header {
     width: 28vw;
   }  
   .bloomi .overview {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin-top: 2em;
     margin-bottom: 3em;
   }
@@ -1427,6 +1448,34 @@ header {
     margin: 0 auto;
     margin-top: 3em;
     margin-bottom: 3em;
+  }
+
+  /* JEMU */
+  .jemu .project-header, .jemu .overview, .jemu .linkedin-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  .jemu .project-header .screens-container6 {
+    width: 40vw;
+  } 
+  .jemu .project-header p {
+    width: 28vw;
+  } 
+  .jemu .overview {
+    margin-top: 2em;
+  }
+  .jemu h3 {
+    font-size: 3em;
+  }
+  .jemu .linkedin {
+    text-align: center;
+  }
+  .jemu .linkedin p, .jemu .linkedin h3 {
+    text-align: left;
+  }
+  .jemu .linkedin-screen {
+    width: 60%;
   }
 }
 

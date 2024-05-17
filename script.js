@@ -115,11 +115,13 @@ function loadProjectDetails(projectFile) {
           document.querySelector('.close-btn').addEventListener('click', function() {
               var projectPopUp = document.getElementById('projectPopUp');
               projectPopUp.style.display = 'none';
+
+              stopSlider();
               
               const videoElement = document.querySelector('.video video');
               if (videoElement) {
                   videoElement.pause();
-              }
+              } 
           });
 
           document.addEventListener('click', closePopUpOutside);
@@ -131,6 +133,14 @@ function loadProjectDetails(projectFile) {
 
   xhr.send();
 }
+
+function stopSlider() {
+  if (window.sliderInstance && window.sliderInstance.stop) {
+      window.sliderInstance.stop();
+      window.sliderInstance = null; 
+  }
+}
+
 
 function showProjectPopUp(content) {
   var projectDetailsContainer = document.getElementById('projectDetails');
@@ -160,6 +170,7 @@ function closePopUpOutside(event) {
   if (!projectDetailsContainer.contains(event.target) && event.target !== projectPopUp) {
       // Hide the pop-up
       projectPopUp.style.display = 'none';
+      stopSlider();
       const videoElement = document.querySelector('.video video');
       if (videoElement) {
           videoElement.pause();

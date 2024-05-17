@@ -1,70 +1,46 @@
-function initializeSlider(containerSelector, cycle, numScreens) {
-  let currentIndex = 0;
+if (!window.sliderInstance) {
+    window.sliderInstance = {};
 
-  function showSlide(index) {
-      const screens = document.querySelector(`${containerSelector} .screens`);
-      if (screens) {
-          screens.style.transform = `translateX(${index * -100}%)`;
-      }
-  }
+    function initializeSlider2(containerSelector, cycle, numScreens) {
+        let currentIndex = 0;
 
-  function nextSlide() {
-      currentIndex = (currentIndex + 1) % numScreens;
-      showSlide(currentIndex);
-  }
+        function showSlide(index) {
+            const screens = document.querySelector(`${containerSelector} .screens`);
+            if (screens) {
+                screens.style.transform = `translateX(${index * -100}%)`;
+            }
+        }
 
-  function prevSlide() {
-      currentIndex = (currentIndex - 1 + numScreens) % numScreens;
-      showSlide(currentIndex);
-  }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % numScreens;
+            showSlide(currentIndex);
+        }
 
-  function autoSlide() {
-      nextSlide();
-      setTimeout(autoSlide, cycle);
-  }
+        function autoSlide() {
+            nextSlide();
+            window.sliderInstance.timeoutID = setTimeout(autoSlide, cycle);
+        }
 
-  // Ensure the autoSlide runs only if .screens is present
-  const screensContainer = document.querySelector(`${containerSelector} .screens`);
-  if (screensContainer) {
-      autoSlide();
-  }
-
-  window.nextSlide = nextSlide;
-  window.prevSlide = prevSlide;
+        // Ensure the autoSlide runs only if .screens is present
+        const screensContainer = document.querySelector(`${containerSelector} .screens`);
+        if (screensContainer) {
+            window.sliderInstance = {
+                timeoutID: null,
+                stop: function() {
+                    clearTimeout(this.timeoutID);
+                }
+            };
+            autoSlide();
+        }
+    }
 }
 
-function initializeSlider2(containerSelector, cycle, numScreens) {
-  let currentIndex = 0;
-
-  function showSlide(index) {
-      const screens = document.querySelector(`${containerSelector} .screens`);
-      if (screens) {
-          screens.style.transform = `translateX(${index * -100}%)`;
-      }
-  }
-
-  function nextSlide() {
-      currentIndex = (currentIndex + 1) % numScreens;
-      showSlide(currentIndex);
-  }
-
-  function autoSlide() {
-      nextSlide();
-      setTimeout(autoSlide, cycle);
-  }
-
-  // Ensure the autoSlide runs only if .screens is present
-  const screensContainer = document.querySelector(`${containerSelector} .screens`);
-  if (screensContainer) {
-      autoSlide();
-  }
-}
-
-initializeSlider('.screens-container', 4000, 8);
 initializeSlider2('.screens-container2', 2000, 4);
 initializeSlider2('.screens-container3', 4000, 19);
 initializeSlider2('.screens-container4', 5000, 3);
 initializeSlider2('.screens-container5', 3000, 3);
+initializeSlider2('.screens-container6', 4000, 9);
+
 
 var slideshowContainers = document.getElementsByClassName("title-container");
 
