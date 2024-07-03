@@ -431,6 +431,10 @@ header {
   color: #ffff;
 }
 
+.stachess .project-header {
+  margin-bottom: 2em;
+}
+
 .stachess .project-header img {
   width: 80vw;
 }
@@ -449,16 +453,8 @@ header {
   margin-top: 5em;
 }
 
-.stachess .colors {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  place-items: center;
-  margin-top: 4dvh;
-}
-
-.stachess .colors img {
-  padding: 4%;
-  width: 20vw;
+.stachess .screens-container7 img {
+  width: 100%;
 }
 
 .stachess .text {
@@ -639,7 +635,7 @@ header {
   margin-bottom: 1em;
 }
 
-.timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5, .jemu .screens-container6 {
+.timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5, .jemu .screens-container6, .stachess .screens-container7  {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -647,7 +643,7 @@ header {
   margin-bottom: 2em;
 }
 
-.timer .screens, .genart .screens, .champion .screens, .art .screens, .jemu .screens {
+.timer .screens, .genart .screens, .champion .screens, .art .screens, .jemu .screens, .stachess .screens {
   display: flex;
   width: 100%;
   transition: transform 0.7s ease-in-out;
@@ -1316,10 +1312,10 @@ header {
   .timer .project-header p {
     width: 22vw;
   }
-  .timer .screens-container2, .genart .screens-container3, .champion .screens-container4 {
+  .timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .stachess .screens-container7 {
     width: 60vw;
   }
-  .timer .screens, .genart .screens, .champion .screens {
+  .timer .screens, .genart .screens, .champion .screens, .stachess .screens {
     width: 60vw;
   }
 

@@ -40,6 +40,7 @@ initializeSlider2('.screens-container3', 4000, 19);
 initializeSlider2('.screens-container4', 5000, 3);
 initializeSlider2('.screens-container5', 3000, 3);
 initializeSlider2('.screens-container6', 4000, 9);
+initializeSlider2('.screens-container7', 4000, 8);
 
 
 var slideshowContainers = document.getElementsByClassName("title-container");
