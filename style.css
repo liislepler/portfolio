@@ -965,6 +965,24 @@ header {
   margin-bottom: 1em;
 }
 
+/* Bubble Garden */
+.bubble {
+  background-color: #F9F3E7;
+  color: #473C38;
+}
+
+.bubble img {
+  width: 100%;
+}
+
+.bubble .project-header {
+  margin-bottom: 5em;
+}
+
+.bubble .project-header p {
+  margin-bottom: 2em;
+}
+
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1049px) {
@@ -1471,6 +1489,11 @@ header {
     text-align: left;
   }
   .jemu .linkedin-screen {
+    width: 60%;
+  }
+
+  /* Bubble Garden */
+  .bubble .text {
     width: 60%;
   }
 }
