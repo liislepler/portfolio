@@ -635,7 +635,8 @@ header {
   margin-bottom: 1em;
 }
 
-.timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5, .jemu .screens-container6, .stachess .screens-container7  {
+.timer .screens-container2, .genart .screens-container3, .champion .screens-container4, .art .screens-container5, 
+.jemu .screens-container6, .stachess .screens-container7  {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -983,6 +984,75 @@ header {
   margin-bottom: 2em;
 }
 
+/* Rotoy */
+.rotoy {
+  background-color: #FAFBFC;
+  color: #140A2B;
+}
+
+.rotoy img {
+  width: 100%;
+}
+
+.rotoy h2 {
+  color: #1EBBD2;
+}
+
+.rotoy h3 {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2.2em;
+  margin: 0;
+  margin-top: 1em;
+  color: #1EBBD2;
+}
+
+.rotoy img {
+  width: 100%;
+}
+
+.rotoy .dash img, .dash-img img {
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(81, 81, 81, 0.3);
+  margin-top: 1em;
+}
+
+.rotoy .dash .title {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  margin: 0;
+  margin-top: 1em;
+  color: #F496CD;
+}
+
+.rotoy .dash, .rotoy .dash-img {
+  margin-bottom: 3em;
+}
+
+.rotoy .dash .story-img {
+  box-shadow: none;
+}
+
+.rotoy .social img {
+  margin-top: 1em;
+}
+
+.rotoy .social {
+  margin-bottom: 5em;
+}
+
+.rotoy .dash .maria-img {
+  box-shadow: none;
+  display: flex;  
+  justify-content: center; 
+  align-items: center;  
+  width: 70%;
+  margin: 0 auto; 
+}
+
+
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1049px) {
@@ -1061,7 +1131,8 @@ header {
     width: 60vw;
   }
 
-  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, 
+  .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text, .rotoy .text {
     width: 40vw;
   }
 
@@ -1284,7 +1355,8 @@ header {
   .luca .screenshots img, .timer .screenshots img {
     width: 55vw;
   }
-  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text {
+  .stachess .text, .stachess .feedback p, .luca .text, .world .text, .timer .text, 
+  .plants .text, .coffee .text, .genart .text, .tracker .text, .jemu .text, .rotoy .text {
     width: 30vw;
   }
 
@@ -1494,6 +1566,50 @@ header {
 
   /* Bubble Garden */
   .bubble .text {
+    width: 60%;
+  }
+
+  /* Rotoy */
+  .rotoy .project-header, .rotoy .dash, .rotoy .dash-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rotoy .project-header img {
+    width: 45vw;
+  } 
+  .rotoy .project-header p {
+    width: 25vw;
+  } 
+  .rotoy h3 {
+    font-size: 4.5em;
+    margin-top: 0.5em;
+  }
+  .rotoy .dash .title {
+    font-weight: 800;
+    font-size: 2em;
+  }
+  .rotoy .dash .user-flow {
+    width: 90%;
+  }
+  .rotoy .dash-img {
+    grid-gap: 1em;
+  }
+  .rotoy .dash .dash-img-2 {
+    margin-top: 3em;
+  }
+  .rotoy .social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+  }
+  .rotoy .social .text {
+    margin-top: 8em;
+    width: 22vw;
+  }
+  .rotoy .social img {
+    margin-top: 5em;
+  }
+  .rotoy .dash .maria-img {
     width: 60%;
   }
 }
